@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Spotify Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <img id="custom-image" src="https://placehold.co/300x300" alt="Artwork" onclick="triggerImageUpload()">
+            <input type="file" id="image-upload" accept="image/*" style="display: none;">
+
+            <!-- Editable Text -->
+            <div class="text-content">
+                <h1 class="song-title editable-text" onclick="makeEditable(this)">Click to edit</h1>
+                <p class="artist-name editable-text" onclick="makeEditable(this)">Click to edit</p>
+            </div>
+
+            <!-- Background Color Button and Export Button -->
+            <button id="change-bg-color" class="action-button" onclick="openColorPicker()">Change Background
+                Color</button>
+            <input type="color" id="color-picker" style="display: none;">
+            <button id="export-btn" class="action-button" onclick="exportPNG()">Export PNG</button>
+
+            <!-- Logo and Label Inside Card -->
+            <div class="bottom-logo">
+                <img src="images/gh.png" alt="Logo" class="logo">
+                <p class="project-label">gnh project</p>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
