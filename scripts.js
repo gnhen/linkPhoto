@@ -103,6 +103,8 @@ function exportPNG() {
         document.getElementById('change-bg-color').style.display = '';
         document.getElementById('export-btn').style.display = '';
         document.getElementById('size-slider').style.display = ''; // Restore the slider
+        document.getElementById('size-label').style.display = '';
+        document.getElementById('pixel-size').style.display = '';
 
         // Trigger download
         const link = document.createElement('a');
