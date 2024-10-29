@@ -27,6 +27,12 @@
             <input type="color" id="color-picker" style="display: none;">
             <button id="export-btn" class="action-button" onclick="exportPNG()">Export PNG</button>
 
+            <!-- Slider for Adjusting Size -->
+            <label id="size-label" for="size-slider">Adjust Card Size:</label>
+            <input type="range" id="size-slider" min="150" max="330" value="300" step="10"
+                oninput="adjustCardSize(this.value)">
+            <span id="pixel-size">300px</span>
+
             <!-- Logo and Label Inside Card -->
             <div class="bottom-logo">
                 <img src="images/gh.png" alt="Logo" class="logo">
@@ -36,5 +42,6 @@
     </div>
     <script src="scripts.js"></script>
 </body>
+
 
 </html>
